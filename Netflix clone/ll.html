@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MyFlix — Stream movies & TV</title>
+  <meta name="description" content="Unlimited movies, TV shows, and more. Ready to watch? Enter your email to create or restart your membership."/>
+  <style>
+    /* Reset & base */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:#141414;color:#fff;
+      -webkit-font-smoothing:antialiased;line-height:1.4;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px;}
+
+    /* Header */
+    header{
+      position:fixed;top:0;left:0;right:0;z-index:40;
+      background:linear-gradient(0deg, rgba(20,20,20,0.65), rgba(20,20,20,0.25));
+      border-bottom:1px solid rgba(255,255,255,0.03);
+      backdrop-filter: blur(6px);
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{
+      width:110px;height:28px;background:#e50914;color:#fff;font-weight:700;
+      display:inline-flex;align-items:center;justify-content:center;border-radius:4px;
+      font-size:18px;letter-spacing:1px;
+    }
+    .nav-right{display:flex;gap:12px;align-items:center}
+    .lang{font-size:14px;padding:8px 12px;border-radius:4px;background:transparent;border:1px solid rgba(255,255,255,0.06)}
+    .signin{background:transparent;border:1px solid rgba(255,255,255,0.12);padding:8px 14px;border-radius:4px;color:#fff}
+
+    /* Hero */
+    .hero{
+      padding-top:120px;padding-bottom:80px;
+      min-height:60vh;display:flex;align-items:center;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.65) 70%),
+        url('https://picsum.photos/id/1018/1600/900') center/cover no-repeat;
+    }
+    .hero-inner{display:flex;flex-direction:column;gap:18px;max-width:800px}
+    .hero h1{font-size:48px;line-height:1.02;font-weight:800;margin-bottom:6px}
+    .hero p.lead{font-size:18px;color:#e6e6e6;max-width:680px}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+    .email-input{display:flex;max-width:720px;width:100%}
+    .email-input input{
+      flex:1;padding:14px 16px;border-radius:4px 0 0 4px;border:0;font-size:16px;
+      outline:none;
+    }
+    .btn-primary{
+      background:#e50914;border:none;color:#fff;padding:14px 20px;border-radius:4px;font-weight:700;
+      display:inline-flex;align-items:center;gap:10px;cursor:pointer;
+    }
+    .subnote{font-size:13px;color:#dcdcdc;margin-top:6px}
+
+    /* Info / reasons */
+    .reasons{padding:48px 0}
+    .row{display:flex;gap:20px;flex-wrap:wrap}
+    .card{flex:1;min-width:220px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:8px}
+    .card h3{font-size:18px;margin-bottom:8px}
+
+    /* Trending grid */
+    .trending{padding:24px 0}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px}
+    .poster{background:#222;border-radius:6px;overflow:hidden;position:relative;padding-bottom:150%;background-size:cover;background-position:center}
+    .poster .label{position:absolute;left:8px;bottom:8px;background:rgba(0,0,0,0.6);padding:6px 8px;border-radius:4px;font-size:13px}
+
+    /* FAQ */
+    .faq{padding:40px 0}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,0.04);padding:14px 0}
+    .faq-question{display:flex;justify-content:space-between;cursor:pointer;font-weight:600}
+    .faq-answer{margin-top:8px;display:none;color:#ddd;font-size:15px}
+
+    /* Footer */
+    footer{padding:40px 0;color:#9b9b9b;font-size:14px}
+
+    /* Responsiveness */
+    @media (max-width:720px){
+      .hero h1{font-size:34px}
+      .logo{width:90px;height:26px;font-size:16px}
+      header{height:64px}
+    }
+    </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden>MyFlix</div>
+      </div>
+      <div class="nav-right">
+        <div class="lang">English</div>
+        <a class="signin" href="#">Sign In</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1>Unlimited movies, TV shows, and more.</h1>
+        <p class="lead">Watch anywhere. Cancel anytime. Enter your email to create or restart your membership.</p>
+
+        <div class="cta-row">
+          <form id="signupForm" class="email-input" onsubmit="event.preventDefault();signup();">
+            <input id="email" type="email" placeholder="Email address" required aria-label="Email address"/>
+            <button class="btn-primary" type="submit">Get Started ➜</button>
+          </form>
+        </div>
+        <div class="subnote">Starts at ₦ — choose a plan that fits you. Cancel anytime.</div>
+      </div>
+    </section>
+
+    <section class="container reasons">
+      <div class="row">
+        <div class="card">
+          <h3>Enjoy on your TV</h3>
+          <p>Watch on Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, and more.</p>
+        </div>
+        <div class="card">
+          <h3>Download and go</h3>
+          <p>Save your favorites to watch offline on your phone or tablet.</p>
+        </div>
+        <div class="card">
+          <h3>Create profiles for kids</h3>
+          <p>Separate kids experience with parental controls included.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container trending">
+      <h2 style="margin-bottom:12px">Trending Now</h2>
+      <div class="grid" id="posterGrid">
+        <!-- posters inserted by JS -->
+      </div>
+    </section>
+
+    <section class="container faq">
+      <h2 style="margin-bottom:12px">Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>What is MyFlix?</span><span>+</span>
+        </div>
+        <div class="faq-answer">MyFlix is a sample streaming prototype used to demonstrate a Netflix-style landing page. Replace the content and images with your own assets for production.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>How much does it cost?</span><span>+</span>
+        </div>
+        <div class="faq-answer">Pricing varies by plan. This template does not collect payments — integrate a payment provider for subscriptions.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Where can I watch?</span><span>+</span>
+        </div>
+        <div class="faq-answer">Watch anywhere on internet-connected devices with a modern browser or native apps.</div>
+      </div>
+    </section>
+
+    <footer class="container">
+      <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px">
+        <div>
+          <strong>MyFlix Nigeria</strong>
+          <div style="margin-top:10px">Questions? Contact us — this is a demo page.</div>
+        </div>
+        <div style="min-width:160px">
+          <div>English</div>
+          <div style="margin-top:8px">© <span id="year"></span> MyFlix. Not affiliated with any trademark.</div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // small JS: populate poster grid and simple interactions
+    const posterGrid = document.getElementById('posterGrid');
+    const sample = [
+      {id:1011,title:'Thinline'},
+      {id:1003,title:'Beauty in Black'},
+      {id:1012,title:'The Waiter'},
+      {id:1005,title:'Wednesday'},
+      {id:1020,title:'Mantis'},
+      {id:1024,title:'Fatal Seduction'},
+      {id:1001,title:'Devil Is a Liar'},
+      {id:1030,title:'Néro the Assassin'},
+      {id:1035,title:'Bon Appétit, Your Majesty'},
+      {id:1040,title:'To Kill a Monkey'}
+    ];
+
+    sample.forEach(p=>{
+      const el = document.createElement('div');
+      el.className = 'poster';
+      // picsum by id for placeholder images
+      el.style.backgroundImage = url('https://picsum.photos/id/${p.id}/600/900');
+      el.innerHTML = <div class="label">${p.title}</div>;
+      posterGrid.appendChild(el);
+    });
+
+    function toggleFaq(el){
+      const ans = el.nextElementSibling;
+      const plus = el.querySelector('span:last-child');
+      if(ans.style.display==='block'){ ans.style.display='none'; plus.textContent='+' }
+      else{ ans.style.display='block'; plus.textContent='−' }
+    }
+
+    function signup(){
+      const email = document.getElementById('email').value;
+      // simple mock behaviour
+      alert('Thanks — we would send a signup link to: ' + email + '\n\n(Replace alert with real signup integration.)');
+    }
+
+    // misc
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

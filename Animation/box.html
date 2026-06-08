@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS DVD Bounce Animation</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    background: black;
+    overflow: hidden;
+  }
+
+  .box {
+    position: absolute;
+    width: 120px;
+    height: 60px;
+    background: linear-gradient(45deg, #00bcd4, #4caf50);
+    border-radius: 8px;
+    color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: dvdBounce 6s linear infinite;
+  }
+
+  @keyframes dvdBounce {
+    0%   { top: 0; left: 0; background: #00bcd4; }
+    25%  { top: 0; left: calc(100% - 120px); background: #ff9800; }
+    50%  { top: calc(100% - 60px); left: calc(100% - 120px); background: #e91e63; }
+    75%  { top: calc(100% - 60px); left: 0; background: #9c27b0; }
+    100% { top: 0; left: 0; background: #00bcd4; }
+  }
+</style>
+</head>
+<body>
+  <div class="box">DVD</div>
+</body>
+</html>

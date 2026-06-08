@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: end;
+}
+.svg{
+    
+    border-radius: 50%;
+    padding: 5px 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.one{
+    position: relative;
+}
+.svg:hover{
+   background-color: lightgray;
+}
+.lab,.labs{
+    background-color: black;
+    color: white;
+    border-radius: 3px;
+    padding: 3px;
+    position: absolute;
+    top: 35px;
+    right: -20px;
+    width: 85px;
+    text-align: center;
+    display: none
+}
+.labs{
+    width: 120px;
+    right: 0;
+}
+.one:hover .lab ,.two:hover .labs{
+    display: block;
+
+}.two button{
+    background-color: transparent;
+    border: 0;
+}
+.first .circle{
+    width: 30px;
+    height: 30px;
+    background-color: blue;
+    border-radius: 50%;
+}
+.first div{
+    
+    border-radius: 4px;
+    padding: 3px 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-direction: column;
+    width: 80px;
+    height: 90px;
+
+}
+.first{
+    background-color: aqua;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-radius: 5px;
+    gap: 6px;
+    padding: 10px 0;
+    margin: 6px 0 0 0;
+
+}
+.scroll{
+    width: 310px;
+    background-color: cadetblue;
+    height: 470px;
+    padding: 6px;
+    border-radius: 5px;
+    overflow: auto;
+    right: 0;
+    position: absolute;
+    display: none;
+}
+.first div:hover{
+    background-color: aquamarine;
+}
+.two:focus-within .scroll{
+    display: block;
+}
+#input{
+    background-color: blue;
+    width: 600px;
+    display: flex;
+    gap: 4px;
+    /* justify-content: space-between; */
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    padding: 5px;
+    
+}
+#input input{
+    width: 500px;
+    border: 0;
+    outline: 0;
+}
+.middle{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 600px;
+
+}
+.inputs{
+    background-color: cadetblue;
+    height: 300px;
+    width: 40%;
+    border-radius: 0 0 20px 20px;
+    padding: 0 12px 0 0;
+    position: absolute;
+    display: none;
+    
+}
+.input{
+    width: 600px;
+}
+.hold{
+    /* background-color: blueviolet; */
+    display: flex;
+    align-items: center;
+    border-radius: 0 25px 25px 0;
+    justify-content: space-between;
+    padding: 6px;
+}
+.hold div:first-child{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.hold div:last-child{
+    visibility: hidden;
+}
+.hold:hover div:last-child{
+    visibility: visible;
+}
+.hold:hover{
+    background-color: lightgray;
+}
+.input:focus-within .inputs{
+    display: block;
+}
+.input:focus-within #input{
+    border-radius: 20px 20px 0 0;
+}

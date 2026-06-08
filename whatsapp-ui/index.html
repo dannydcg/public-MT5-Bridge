@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WhatsApp Android View</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="phone-frame">
+    <div class="app">
+      <!-- Header -->
+      <header class="top-bar">
+        <div class="status-bar">
+          <span class="time">10:14</span>
+          <div class="icons">
+            <span>📶</span>
+            <span>🌐</span>
+            <span>🔋54%</span>
+          </div>
+        </div>
+        <h1>WhatsApp</h1>
+        <div class="header-icons">
+          <span>📷</span>
+          <span>⋮</span>
+        </div>
+      </header>
+
+      <!-- Search -->
+      <div class="search-bar">
+        <input type="text" placeholder="Ask Meta AI or Search" />
+      </div>
+
+      <!-- Tabs -->
+      <div class="tabs">
+        <button class="active">All</button>
+        <button>Unread 7</button>
+        <button>Favorites</button>
+        <button>Groups 4</button>
+      </div>
+
+      <!-- Main content -->
+      <main class="main-content">
+        <section id="chats" class="page active">
+          <div class="chat">
+            <img src="setup.jpg" class="avatar" />
+            <div class="chat-info">
+              <h2>COHORTS</h2>
+              <p>Sqi october cohort</p>
+            </div>
+            <div class="meta">
+              <span class="time">9:59 AM</span>
+              <span class="badge">999+</span>
+            </div>
+          </div>
+
+          <div class="chat">
+            <img src="alhaji.jpg" class="avatar" />
+            <div class="chat-info">
+              <h2>TEACHER</h2>
+              <p>📷 Assignment</p>
+            </div>
+            <div class="meta">
+              <span class="time">9:53 AM</span>
+              <span class="badge">43</span>
+            </div>
+          </div>
+
+          <div class="chat">
+            <div class="avatar letter">S</div>
+            <div class="chat-info">
+              <h2>COMMENTS</h2>
+              <p>I dont like design but i dey try make teacher no report me again</p>
+            </div>
+            <div class="meta"><span class="time">9:41 AM</span></div>
+          </div>
+        </section>
+
+        <section id="updates" class="page">
+          <h2>📰 Status Updates</h2>
+          <p>No recent updates yet.</p>
+        </section>
+
+        <section id="communities" class="page">
+          <h2>👥 Communities</h2>
+          <p>Your groups and channels will appear here.</p>
+        </section>
+
+        <section id="calls" class="page">
+          <h2>📞 Calls</h2>
+          <p>No recent calls found.</p>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="nav-bar">
+        <button class="nav-btn active" data-target="chats">💬 Chats</button>
+        <button class="nav-btn" data-target="updates">📢 Updates</button>
+        <button class="nav-btn" data-target="communities">👥 Communities</button>
+        <button class="nav-btn" data-target="calls">📞 Calls</button>
+      </footer>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

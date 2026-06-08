@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google</title>
+  <link rel="icon" href="https://www.google.com/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <header>
+    <nav class="nav-right">
+      <a href="#">Gmail</a>
+      <a href="#">Images</a>
+
+      <div class="apps">
+        <img src="https://www.svgrepo.com/show/331368/grid-dots.svg" class="icon" alt="apps" />
+        <div class="dropdown apps-dropdown">
+          <a href="#">Search</a>
+          <a href="#">Drive</a>
+          <a href="#">YouTube</a>
+          <a href="#">Maps</a>
+          <a href="#">Calendar</a>
+          <a href="#">News</a>
+          <a href="#">Photos</a>
+          <a href="#">Translate</a>
+        </div>
+      </div>
+
+      <div class="profile">
+        <img src="https://www.svgrepo.com/show/452030/avatar.svg" class="icon" alt="profile" />
+        <div class="dropdown profile-dropdown">
+          <p><strong>accentuate.dev@gmail.com</strong></p>
+          <hr />
+          <a href="#">Manage your Google Account</a>
+          <a href="#">Add another account</a>
+          <a href="#">Sign out</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main>
+    <div class="logo">
+      <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google" />
+    </div>
+
+    <div class="search-container">
+      <div class="search-box">
+        <img src="https://www.svgrepo.com/show/7109/search.svg" class="search-icon" alt="search" />
+        <input type="text" id="search" placeholder="Search Google or type a URL" />
+        <div class="right-icons">
+          <img src="https://www.svgrepo.com/show/505262/lens.svg" class="lens-icon" alt="lens" />
+          <img src="https://www.svgrepo.com/show/223046/microphone.svg" class="mic-icon" alt="mic" />
+        </div>
+      </div>
+
+      <ul id="suggestions" class="suggestions">
+        <li>Weather today</li>
+        <li>Latest football scores</li>
+        <li>News headlines</li>
+        <li>How to learn HTML fast</li>
+        <li>Movies showing near me</li>
+      </ul>
+
+      <div class="buttons">
+        <button>Google Search</button>
+        <button>I'm Feeling Lucky</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="country">Nigeria</div>
+    <div class="footer-links">
+      <div class="left">
+        <a href="#">About</a>
+        <a href="#">Advertising</a>
+        <a href="#">Business</a>
+        <a href="#">How Search works</a>
+      </div>
+      <div class="right">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Settings</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== JS ===== -->
+  <script>
+    const search = document.getElementById("search");
+    const suggestions = document.getElementById("suggestions");
+    const app = document.querySelector(".apps");
+    const profile = document.querySelector(".profile");
+
+    // Show dummy suggestions on focus
+    search.addEventListener("focus", () => (suggestions.style.display = "block"));
+    search.addEventListener("blur", () => setTimeout(() => (suggestions.style.display = "none"), 200));
+
+    // Toggle dropdowns
+    app.addEventListener("click", (e) => {
+      e.stopPropagation();
+      document.querySelector(".apps-dropdown").classList.toggle("show");
+    });
+
+    profile.addEventListener("click", (e) => {
+      e.stopPropagation();
+      document.querySelector(".profile-dropdown").classList.toggle("show");
+    });
+
+    // Close dropdowns when clicking outside
+    window.addEventListener("click", () => {
+      document.querySelector(".apps-dropdown").classList.remove("show");
+      document.querySelector(".profile-dropdown").classList.remove("show");
+    });
+  </script>
+</body>
+</html>

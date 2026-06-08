@@ -1,0 +1,21 @@
+#calendar{
+    font-size: 30px;
+    color: blue;
+}
+p{color: rebeccapurple;
+    text-decoration: underline;
+    text-decoration-line: line-through;
+    text-decoration-color: blue;
+    text-decoration-style: double;
+    text: decoration thickness 1px;
+    text-shadow: 2px 4px 10px lawngreen;
+    box-shadow: 2px 4px;
+
+}
+h1{
+    box-shadow: 2px 4px 40px red;
+    text-shadow: 2px 4px 40px red;
+    text-decoration: underline;
+    text-shadow: 2px 4px 10px;
+    text-decoration-color: blue;
+}

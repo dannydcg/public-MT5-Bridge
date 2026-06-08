@@ -1,0 +1,29 @@
+table,td{
+    border: 1px solid black;
+    padding: 20px;
+    margin: auto;
+    border-collapse: collapse;
+    }
+    .green{background-image: url(../Ludo/green.png) ;
+    background-position: center;
+    background-size: contain;
+    
+    }
+
+    .first-bg{background-color: green;}
+
+    .yellow{background-image: url(../Ludo/yellow.png);
+    background-position: center;
+    background-size: cover;}
+
+    .man u{background-image: url(../Ludo/manu.png);
+    background-position: top;
+background-size: contain;}
+
+    .dice{background-image: url(../Ludo/dice.jpg);
+    background-position: center;
+background-size: auto;}
+
+.chelsea{background-image: url(../Ludo/chelsea.png);
+background-position: center;
+background-size: contain;}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bouncing Ball Animation</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+    transition: background 2s;
+  }
+
+  .ball {
+    width: 80px;
+    height: 80px;
+    background-color: crimson;
+    border-radius: 50%;
+    position: relative;
+  }
+
+  button {
+    margin-top: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+  <div class="ball" id="ball"></div>
+  <button id="toggle">Stop Animation</button>
+
+  <script>
+    let ball = document.getElementById("ball");
+    let btn = document.getElementById("toggle");
+    let pos = 0;
+    let direction = 1;
+    let running = true;
+
+    function changeBackground() {
+      const colors = [
+        "linear-gradient(45deg, #4facfe, #00f2fe)",
+        "linear-gradient(45deg, #43e97b, #38f9d7)",
+        "linear-gradient(45deg, #fa709a, #fee140)",
+        "linear-gradient(45deg, #30cfd0, #330867)"
+      ];
+      document.body.style.background = colors[Math.floor(Math.random() * colors.length)];
+    }
+
+    function animate() {
+      if (running) {
+        pos += 4 * direction;
+        if (pos > 300 || pos < 0) {
+          direction *= -1;
+          changeBackground();
+        }
+        ball.style.left = pos + "px";
+        requestAnimationFrame(animate);
+      }
+    }
+
+    btn.onclick = function() {
+      running = !running;
+      if (running) {
+        btn.textContent = "Stop Animation";
+        animate();
+      } else {
+        btn.textContent = "Start Animation";
+      }
+    };
+
+    animate();
+  </script>
+</body>
+</html>

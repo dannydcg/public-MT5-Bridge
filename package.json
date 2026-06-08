@@ -1,0 +1,14 @@
+{
+  "name": "crypto-mt5-bridge",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:backend": "npm --workspace @crypto-mt5-bridge/backend run dev",
+    "build:backend": "npm --workspace @crypto-mt5-bridge/backend run build",
+    "start:backend": "npm --workspace @crypto-mt5-bridge/backend run start",
+    "lint": "echo \"Add linting later\""
+  }
+}

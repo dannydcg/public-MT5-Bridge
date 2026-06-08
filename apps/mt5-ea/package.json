@@ -1,0 +1,8 @@
+{
+  "name": "@crypto-mt5-bridge/mt5-ea",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "echo \"MT5 EA build not applicable\""
+  }
+}

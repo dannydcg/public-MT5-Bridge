@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pure CSS DVD Bounce</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    background: black;
+    overflow: hidden;
+  }
+
+  .dvd {
+    position: absolute;
+    width: 120px;
+    height: 60px;
+    background: linear-gradient(45deg, #00bcd4, #4caf50);
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: bounce 8s linear infinite;
+  }
+
+  @keyframes bounce {
+    0% {
+      top: 0;
+      left: 0;
+      background: linear-gradient(45deg, #00bcd4, #4caf50);
+    }
+    25% {
+      top: 0;
+      left: calc(100% - 120px);
+      background: linear-gradient(45deg, #ff9800, #ff5722);
+    }
+    50% {
+      top: calc(100% - 60px);
+      left: calc(100% - 120px);
+      background: linear-gradient(45deg, #e91e63, #9c27b0);
+    }
+    75% {
+      top: calc(100% - 60px);
+      left: 0;
+      background: linear-gradient(45deg, #3f51b5, #2196f3);
+    }
+    100% {
+      top: 0;
+      left: 0;
+      background: linear-gradient(45deg, #00bcd4, #4caf50);
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="dvd">DVD</div>
+</body>
+</html>

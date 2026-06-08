@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    width: 350px;
+    height: 550px;
+    border-radius: 20px;
+    border: 8px double black;
+    margin: auto;
+    position: relative;
+}
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: cornflowerblue;
+    position :absolute ;
+    bottom: 0;
+    width: 100%;
+    border-radius: 0 0 12px 12px;
+    
+    
+}
+button{
+    background-color: transparent;
+    border: 0;
+
+}
+#Chats,#update,#Communities,#Calls {
+    background-color: blanchedalmond;
+    width: 100%;
+    height: 490px;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    border-radius: 10px 10px 0 0;
+}
+#update{
+    background-color: aqua;
+    z-index: -1;
+}
+#Communities{
+    background-color: blue;
+    z-index: -1;
+}
+#Calls{
+    background-color: antiquewhite;
+    z-index: -1;
+}
+.update:focus-within #update{
+    z-index: 1;
+}
+.Calls:focus-within #Calls{
+    z-index: 1;
+}
+.Communities:focus-within #Communities{
+    z-index: 1;
+}

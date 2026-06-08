@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://www.google.com/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Gmail</a></li>
+        <li><a href="#">Images</a></li>
+        <li id="apps-btn" class="apps-btn">☰</li>
+        <li id="profile-btn"><span class="profile"></span></li>
+      </ul>
+    </nav>
+
+    <!-- App Drawer -->
+    <div id="app-drawer" class="app-drawer">
+      <div class="app-item"><img src="https://www.google.com/images/icons/product/gmail-64.png"><span>Gmail</span></div>
+      <div class="app-item"><img src="https://www.google.com/images/icons/product/maps-64.png"><span>Maps</span></div>
+      <div class="app-item"><img src="https://www.google.com/images/icons/product/youtube-64.png"><span>YouTube</span></div>
+      <div class="app-item"><img src="https://www.google.com/images/icons/product/drive-64.png"><span>Drive</span></div>
+      <div class="app-item"><img src="https://www.google.com/images/icons/product/photos-64.png"><span>Photos</span></div>
+      <div class="app-item"><img src="https://www.google.com/images/icons/product/play-64.png"><span>Play</span></div>
+    </div>
+
+    <!-- Profile Dropdown -->
+    <div id="profile-dropdown" class="profile-dropdown">
+      <div class="profile-info">
+        <div class="profile-pic"></div>
+        <div>
+          <p class="name">John Doe</p>
+          <p class="email">johndoe@gmail.com</p>
+        </div>
+      </div>
+      <div class="profile-actions">
+        <button class="manage">Manage your Google Account</button>
+        <hr>
+        <button class="signout">Sign out</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Section -->
+  <div class="main">
+    <img class="logo" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google">
+
+    <div class="search-container">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input id="search-input" type="text" placeholder="Search Google or type a URL" autocomplete="off">
+        <span class="mic-icon">🎤</span>
+      </div>
+      <ul class="suggestions" id="suggestions"></ul>
+    </div>
+
+    <div class="buttons">
+      <button>Google Search</button>
+      <button>I'm Feeling Lucky</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-top">Nigeria</div>
+    <div class="footer-bottom">
+      <div class="left">
+        <a href="#">About</a>
+        <a href="#">Advertising</a>
+        <a href="#">Business</a>
+        <a href="#">How Search works</a>
+      </div>
+      <div class="right">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Settings</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

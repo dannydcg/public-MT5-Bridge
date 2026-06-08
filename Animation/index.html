@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(to bottom, #f0f0f0, #cce5ff);
+            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+        }
+        .shape{
+            width: 400px;
+            background-color: blue;
+            border: 2px solid purple;
+            height: 150px;
+            position: absolute;
+            animation: movebox 5s linear infinite alternate;
+            /* animation-duration: 3s; */
+             /* animation-delay: 1s;  */
+            /* animation-timing-function: ease-in-out;  */
+             /* animation-iteration-count: infinite;  */
+            /* animation-direction: alternate; */
+        }
+      @keyframes movebox {
+        0%{
+            top: 0;
+            left: 0;
+        }
+        25%{
+            top: 0;
+            left: calc(100% - 120px);
+        }
+        50%{
+            top: calc(100% - 70px);
+            left: calc(100% - 150px);
+
+        }
+        75%{
+            top: calc(100% - 80px);
+            left: 0;
+        }
+        100%{
+            top: 0;
+            left: 0;
+        }
+      }
+    </style>
+</head>
+<body>
+   <P>Animation is the change in the style of an element </P>
+   <div class="shape"></div>
+</body>
+</html>

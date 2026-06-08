@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p::first-letter {
+            color: teal;
+            font-size: larger;
+            font-weight: 900;
+
+        }
+
+        .hold::first-line {
+            color: red;
+
+        }
+
+        .hold {
+            color: blue;
+        }
+
+        ::marker {
+            background-color: brown;
+            color: rgb(243, 240, 255);
+            font-size: 30px;
+        }
+        .contain{
+            width: 250px;
+            height: 250px;
+            overflow: auto;
+        }
+        .contain::-webkit-scrollbar{
+            width: 10px;
+            background-color: transparent;
+        }
+        .contain::-webkit-scrollbar-thumb{
+            background-color: blue;
+            border-radius: 10px;
+            display: none;
+        }
+        .name::before{
+            /* content: 'Myname'; */
+            content: url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png);
+
+        }
+        ::placeholder{
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Thou shall not lie</p>
+    <div class="hold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione illo, ullam quibusdam optio
+        tempora at. Sit consequuntur soluta, rerum porro veniam adipisci? Repellat labore maiores ratione asperiores in
+        quod recusandae.
+        Consequatur nam officia sed tenetur eveniet, qui atque esse fuga et in quo ipsum distinctio voluptatum cumque
+        dolor, laudantium autem. Beatae accusantium earum quibusdam assumenda corrupti voluptatem repudiandae eveniet
+        consectetur!
+        Veritatis provident voluptatem, quibusdam rem voluptatibus accusamus laborum iusto necessitatibus odio
+        temporibus dicta nisi quos distinctio animi nam ipsum aliquam. Ipsa nisi voluptatum harum ullam! Eveniet, est
+        consequatur. Nemo, quam.
+        Corporis, reiciendis illum! Vero natus nam doloremque voluptates doloribus pariatur possimus? Quae eius cumque
+        sed asperiores facilis labore distinctio, illum consequuntur, ut harum iste. Amet culpa rem et itaque expedita.
+        Quae cum, quibusdam fugiat deserunt, iusto doloremque unde dolorem odio pariatur, impedit necessitatibus
+        recusandae suscipit quidem. Nam ipsum nobis fugiat numquam architecto qui corporis ex vel soluta accusantium,
+        magnam natus!
+        Harum eaque amet cupiditate ducimus ut alias, porro quod at illum voluptas voluptatibus minus autem officia hic
+        facere rem tempora ipsa beatae accusamus sapiente esse repudiandae labore dolore eum? Itaque.</div>
+    <ul>
+        <li>yele</li>
+        <li>yele</li>
+        <li>yele</li>
+        <li>yele</li>
+    </ul>
+    <ol>
+        <li>yekini</li>
+        <li>yekini</li>
+        <li>yekini</li>
+    </ol>
+    <div class="contain">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores dolore perferendis odit
+        quisquam delectus quaerat, cum enim necessitatibus nihil sequi. Vero inventore magnam ullam placeat numquam.
+        Facere, quod. Rem, quae!
+        Nihil excepturi nam assumenda aut? Excepturi minima sapiente maxime consectetur fuga dignissimos, labore nihil
+        sequi quibusdam consequuntur corrupti ex neque, vel earum quo dolores tenetur facere perferendis nesciunt
+        veritatis explicabo!
+        Voluptate eligendi beatae suscipit esse iure impedit rerum nesciunt tenetur cum reprehenderit illo aperiam,
+        optio perspiciatis, commodi blanditiis quos adipisci minima. Saepe similique eos odio perferendis, modi tempora
+        corrupti nobis.
+        Maxime quas quae error! Sequi hic suscipit et accusamus error illum sed amet. Earum magnam, pariatur architecto
+        ratione maxime officiis debitis tenetur a qui ad nostrum, molestias sed eius hic.
+    </div>
+    <div class="name">
+        name
+    </div>
+    <input type="text" placeholder="email">
+
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moving Car Animation</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    overflow: hidden;
+    height: 100vh;
+    background: linear-gradient(#87ceeb, #fff);
+  }
+
+  /* Clouds */
+  .clouds {
+    position: absolute;
+    top: 50px;
+    width: 300%;
+    height: 120px;
+    background: url('https://i.ibb.co/Qm39v1X/clouds.png') repeat-x;
+    background-size: contain;
+    animation: moveClouds 60s linear infinite;
+  }
+
+  @keyframes moveClouds {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* Road */
+  .road {
+    position: absolute;
+    bottom: 0;
+    width: 300%;
+    height: 150px;
+    background: url('https://i.ibb.co/ZLdvYNb/road.png') repeat-x;
+    background-size: contain;
+    animation: moveRoad 5s linear infinite;
+  }
+
+  @keyframes moveRoad {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* Car */
+  .car {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 220px;
+    animation: bounce 1s ease-in-out infinite;
+  }
+
+  .car img {
+    width: 100%;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translate(-50%, 0); }
+    50% { transform: translate(-50%, -10px); }
+  }
+
+  /* Wheel spin */
+  .wheel {
+    position: absolute;
+    bottom: 60px;
+    width: 220px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .wheel img {
+    position: absolute;
+    width: 45px;
+    animation: spin 1s linear infinite;
+  }
+
+  .front-wheel {
+    left: 150px;
+    bottom: 10px;
+  }
+
+  .back-wheel {
+    left: 35px;
+    bottom: 10px;
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+</style>
+</head>
+<body>
+  <div class="clouds"></div>
+
+  <div class="road"></div>
+
+  <div class="car">
+    <img src="https://i.ibb.co/pR9YHs8/car-body.png" alt="Car">
+  </div>
+
+  <div class="wheel">
+    <img src="https://i.ibb.co/NFBR2RP/wheel.png" class="front-wheel" alt="front wheel">
+    <img src="https://i.ibb.co/NFBR2RP/wheel.png" class="back-wheel" alt="back wheel">
+  </div>
+</body>
+</html>

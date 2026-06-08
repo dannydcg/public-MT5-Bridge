@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .rel {
+        width: 100px;
+        height: 100px;
+        background-color: #264368;
+        position: relative;
+        top: 60px;
+      }
+      .abs {
+        width: 120px;
+        height: 200px;
+        background-color: #195216;
+        position: absolute;
+        /* left: 30%; */
+        top: 0;
+        z-index: -1;
+      }
+
+      .child {
+        background-color: #018263;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 0;
+        left: 10%;
+      }
+
+      .main {
+        width: 500px;
+        height: 500px;
+        background-color: #165273;
+        position: relative;
+      }
+      .fix{
+        background-color: darkblue;
+        width: 200px;
+        height: 200px;
+        border-radius: 25px 55px;
+        position: fixed;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="rel"></div>
+
+    <div class="abs"></div>
+    <div class="main">
+      <div class="child"></div>
+    </div>
+    <div class="fix"></div>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: blue;
+    padding: 50px 0;
+}
+form{
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    margin: auto;
+    border-radius: 10px;
+    padding: 15px 0;
+    
+}
+h1{
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+}
+input{
+    width: 250px;
+    height: 30px;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 5px;
+}
+.submit1{
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: blue;
+    border-style: none;
+}
+.para1{
+    font-size: 12px;
+    font-weight: 600;
+    color: lightslategray;
+}
+.firstlink{
+    font-size: 12px;
+    font-weight: 600;
+    color: blue;
+    text-decoration: none;
+}
+.divsubmit{
+    width: 250px;
+    height: 30px;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.divsubmit a{
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+}
+.holder1, .holder2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+hr{
+    width: 40%;
+    border-color: lightgray;
+}
+.divlog1, .divlog2{
+    width: 250px;
+    height: 30px;
+    background-color: rgb(0, 0, 146);
+    border-radius: 5px;
+}
+.divlog2{
+    background-color: transparent;
+    border-style: solid;
+    border-color: lightslategray;
+}
+.div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.divlog1 a, .divlog2 a{
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+}
+.divlog2 a{
+    color: lightslategray;
+}
+.img{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+.divlog1, .divlog2{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 0 10px;
+}

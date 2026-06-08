@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day-Night Car Animation (Fixed)</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    overflow: hidden;
+    height: 100vh;
+    background: linear-gradient(#87ceeb, #ffffff);
+    animation: dayNight 20s linear infinite;
+  }
+
+  @keyframes dayNight {
+    0%, 20% { background: linear-gradient(#87ceeb, #ffffff); }  /* Day */
+    50%, 70% { background: linear-gradient(#00111a, #000); }   /* Night */
+    100% { background: linear-gradient(#87ceeb, #ffffff); }   /* Back to Day */
+  }
+
+  /* Sky elements */
+  .sun, .moon {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation: moveAcross 20s linear infinite;
+  }
+
+  .sun {
+    background: radial-gradient(circle at 30% 30%, #fff700, #ffb300);
+    opacity: 1;
+    animation-delay: 0s;
+  }
+
+  .moon {
+    background: radial-gradient(circle at 30% 30%, #fff, #bbb);
+    opacity: 0;
+    animation-delay: 10s;
+  }
+
+  @keyframes moveAcross {
+    0% { top: 50px; left: -100px; opacity: 1; }
+    25% { top: 10px; left: 40%; opacity: 1; }
+    50% { top: 50px; left: 100%; opacity: 0; }
+    51% { opacity: 0; }
+    100% { opacity: 0; }
+  }
+
+  /* Stars */
+  .stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    pointer-events: none;
+    background-image: radial-gradient(white 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0;
+    animation: starsAppear 20s linear infinite;
+  }
+
+  @keyframes starsAppear {
+    0%, 40% { opacity: 0; }
+    50%, 70% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+  /* Clouds */
+  .clouds {
+    position: absolute;
+    top: 50px;
+    width: 300%;
+    height: 120px;
+    background: url('https://cdn.pixabay.com/photo/2013/07/12/17/58/clouds-152744_1280.png') repeat-x;
+    background-size: contain;
+    animation: moveClouds 60s linear infinite;
+  }
+
+  @keyframes moveClouds {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* Road */
+  .road {
+    position: absolute;
+    bottom: 0;
+    width: 300%;
+    height: 150px;
+    background: url('https://cdn.pixabay.com/photo/2016/10/25/13/07/road-1761675_1280.jpg') repeat-x;
+    background-size: cover;
+    animation: moveRoad 5s linear infinite;
+  }
+
+  @keyframes moveRoad {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* Car */
+  .car {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 220px;
+    animation: bounce 1s ease-in-out infinite;
+    z-index: 2;
+  }
+
+  .car img {
+    width: 100%;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translate(-50%, 0); }
+    50% { transform: translate(-50%, -10px); }
+  }
+
+  /* Wheels */
+  .wheel {
+    position: absolute;
+    bottom: 60px;
+    width: 220px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .wheel img {
+    position: absolute;
+    width: 45px;
+    animation: spin 1s linear infinite;
+  }
+
+  .front-wheel { left: 150px; bottom: 10px; }
+  .back-wheel { left: 35px; bottom: 10px; }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  /* Headlights */
+  .headlights {
+    position: absolute;
+    bottom: 130px;
+    left: 50%;
+    transform: translateX(40%);
+    width: 80px;
+    height: 20px;
+    background: radial-gradient(circle, rgba(255,255,180,0.8), transparent 70%);
+    border-radius: 50%;
+    filter: blur(10px);
+    opacity: 0;
+    animation: headlightsGlow 20s linear infinite;
+  }
+
+  @keyframes headlightsGlow {
+    0%, 40% { opacity: 0; }
+    50%, 70% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+
+</style>
+</head>
+<body>
+  <div class="clouds"></div>
+  <div class="sun"></div>
+  <div class="moon"></div>
+  <div class="stars"></div>
+  <div class="road"></div>
+
+  <div class="car">
+    <img src="https://cdn.pixabay.com/photo/2013/07/13/11/37/car-158155_1280.png" alt="Car">
+  </div>
+
+  <div class="wheel">
+    <img src="https://cdn-icons-png.flaticon.com/512/743/743131.png" class="front-wheel" alt="front wheel">
+    <img src="https://cdn-icons-png.flaticon.com/512/743/743131.png" class="back-wheel" alt="back wheel">
+  </div>
+
+  <div class="headlights"></div>
+</body>
+</html>

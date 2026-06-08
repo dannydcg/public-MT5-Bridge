@@ -1,0 +1,32 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    
+}
+p{
+    color: rebeccapurple;
+}
+.rgb{
+    width: 200px;
+    height: 200px;
+/* the value of rgb runs from 0-255 */
+background-color: rgb(200,100,50)
+
+
+}
+.rgba{
+    width: 200px;
+    height: 200px;
+    border: solid 10px blue;
+/* the value of rgb runs from 0-255 */
+/* the value of alpha runs from 0-1 */
+background-color: rgba(200,100,50,0.346);
+
+}
+.hex{
+    width: 100px;
+    height: 100px;
+    /*the hexadecimal colors start with # the values -#rrggbb */
+        background-color: #f59ca1;
+}

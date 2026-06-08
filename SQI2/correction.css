@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    background-color: aqua;
+    display: flex;
+    justify-content: space-around;
+}
+nav img{width: 120px;
+}
+.right{display: flex;
+align-items: center;
+gap: 20px;
+
+}
+.image{
+    /* background-color: blueviolet; */
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+.box{
+    width: 230px;
+    height: 100px;
+    /* background-color: blue; */
+}
+.section{
+    padding: 0 60px;
+    margin: 25px;
+}
+.section h2{
+    width: 410px;
+
+}
+.container{display: flex;
+justify-content: space-evenly;
+gap: 5px
+;}
+.hero-text h1 { font-weight: 700;font-style: normal;font-variant: normal;font-kerning: auto;font-optical-sizing: auto;
+    font-feature-settings: normal;font-variation-settings: normal;font-stretch: 100%;text-transform: none;
+    text-decoration: none;text-align: left;text-indent: 0px; font-family: Arial, Helvetica, sans-serif;
+    font-size: 64px;
+   line-height: 70.4px;
+   vertical-align: baseline;letter-spacing: normal;word-spacing: 0px;
+   margin: 0px;padding: 0px 0px 10px;background-color: #000000;
+   background-color: rgba(0,0,0,0);color: rgb(0,14,66);
+   color: #000E42;
+
+   .hero-img{font-weight: 500;font-style: normal;font-variant: normal;font-kerning: auto;font-optical-sizing: auto;
+    font-feature-settings: normal;font-variation-settings: normal;font-stretch: 100%;text-transform: none;
+    text-decoration: none;text-align: left;text-indent: 0px; font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+   line-height: 0px;
+   vertical-align: baseline;letter-spacing: normal;word-spacing: 0px;
+   margin: 0px;padding: 0px ;background-color: #000000;
+   height: 50%;
+   width: 50%;
+   color: #666666;}
+   .flow{
+    background-color: blanchedalmond;
+    width: 320px;
+    padding: 9px;
+   }
+      #top{
+        display: flex;
+        gap: 8px;
+      }
+      #top img{
+        width: 40px;
+      }
+      .top{
+        display: flex;
+        justify-content: space-between;
+      }
+      #down{
+        background-color: cadetblue;
+        height: 150px;
+        overflow: auto;
+        scrollbar-width: none;
+      }
+    .shap{
+        /* background: linear-gradient(200deg,plum,purple); */
+        background: radial-gradient(royalblue);
+        width: 70%;
+        height: 300px;
+
+    }
